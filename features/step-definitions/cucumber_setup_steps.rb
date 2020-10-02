@@ -6,10 +6,10 @@ end
 
 And(/^I search "([^"]*)"$/) do |query|
     search_box = 'q'
-    search_button = 'btnG'
+    search_button = 'btnK'
 
-    find(search_box).set query
-    find(search_button).click
+    find_field(name: search_box).set query
+    find_button(name: search_button).click
 end
 
 Then(/^I pause the browser$/) do
